@@ -1,3 +1,4 @@
+# Variables de control
 lista_De_Calificacion = []
 calificion = 0
 aprobado = 60
@@ -8,6 +9,8 @@ contador = 0
 calificacion_Especifica = int(
     input("Por favor, ingresa un valor específico para comparar: "))
 
+
+# Bucle para ingresar la cantidad de notas
 while True:
     try:
         cantidad = int(input("Por favor, ingresa la cantidad de notas: "))
@@ -19,6 +22,7 @@ while True:
     except ValueError:
         print("por favor, ingresa un dato valido.")
 
+# Ingreso de las calificaciones
 for i in range(1, cantidad+1):
     while True:
         try:
@@ -32,19 +36,23 @@ for i in range(1, cantidad+1):
                     "la cantidad debe ser un numero entre el rango de 0 a 100. Intente nuevamente.")
         except ValueError:
             print("por favor, ingresa un dato valido.")
-
+            
+            
+# Calcular el promedio de las calificaciones
 for i in lista_De_Calificacion:
     suma += i
 
 promedio = suma/len(lista_De_Calificacion)
 print(f"Tu promedio es {promedio:.2f}")
 
+# Evaluar si aprobaste o reprobaste
 if promedio >= aprobado:
     print(f"Felicitaciones has aprobado con un promedio de {promedio:.2f}")
 else:
     print(f"Lo sentimos, has reprobrado con un promedio de {promedio:.2f}")
 
 
+# Contar las calificaciones mayores a la calificación específica
 while indice < len(lista_De_Calificacion):
 
     if lista_De_Calificacion[indice] > calificacion_Especifica:
@@ -53,6 +61,7 @@ while indice < len(lista_De_Calificacion):
 print(
     f"La cantidad de calificaciones que son mayores a {calificacion_Especifica} es {count}")
 
+# Contar cuántas veces aparece la calificación específica
 for i in lista_De_Calificacion:
     if calificacion_Especifica == i:
         contador += 1
