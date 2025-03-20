@@ -1,3 +1,6 @@
+import os
+os.system("clear")
+
 # Variables de control
 lista_De_Calificacion = []
 calificion = 0
@@ -6,8 +9,19 @@ suma = 0
 indice = 0
 count = 0
 contador = 0
-calificacion_Especifica = int(
-    input("Por favor, ingresa un valor específico para comparar: "))
+
+# Bucle para validar la calificacion especifica
+while True:
+    try:
+        calificacion_Especifica = float(
+    input("Por favor, ingresa una nota específica para comparar: "))
+        if calificacion_Especifica >= 0:
+            print("")
+            break
+        else:
+            print("por favor, ingresa un numero valido. Intente nuevamente.")
+    except ValueError:
+        print("por favor, ingresa un dato valido.")
 
 
 # Bucle para ingresar la cantidad de notas
@@ -70,7 +84,6 @@ for i in lista_De_Calificacion:
         break
 
 print(f"La calificación {calificacion_Especifica} aparece {contador} {'veces' if contador > 1 else 'vez'}.")
-            
 
 
             
