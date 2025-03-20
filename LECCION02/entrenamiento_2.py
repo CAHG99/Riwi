@@ -10,7 +10,7 @@ calificacion_Especifica = int(
 
 while True:
     try:
-        cantidad = int(input("Cuantas calificaciones deseas ingresar: "))
+        cantidad = int(input("Por favor, ingresa la cantidad de notas: "))
         if cantidad > 0:
             print("")
             break
@@ -60,7 +60,7 @@ for i in lista_De_Calificacion:
     if i < 60:
         break
 
-print(f"La calificación {calificacion_Especifica} aparece {contador} veces.")
+print(f"La calificación {calificacion_Especifica} aparece {contador} {'veces' if contador > 1 else 'vez'}.")
             
 
 
