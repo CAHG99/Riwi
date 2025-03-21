@@ -10,80 +10,75 @@ indice = 0
 count = 0
 contador = 0
 
-# Bucle para validar la calificacion especifica
+# Bucle para validar la calificación específica
 while True:
     try:
-        calificacion_Especifica = float(
-    input("Por favor, ingresa una nota específica para comparar: "))
+        calificacion_Especifica = float(input("\n📚 Por favor, ingresa una nota específica para comparar: "))
         if calificacion_Especifica >= 0:
-            print("")
+            print("\n✔️ ¡Nota válida ingresada!")
             break
         else:
-            print("por favor, ingresa un numero valido. Intente nuevamente.")
+            print("\n⚠️ Por favor, ingresa un número válido. Intenta nuevamente.")
     except ValueError:
-        print("por favor, ingresa un dato valido.")
-
+        print("\n⚠️ Por favor, ingresa un dato válido.")
 
 # Bucle para ingresar la cantidad de notas
 while True:
     try:
-        cantidad = int(input("Por favor, ingresa la cantidad de notas: "))
+        cantidad = int(input("\n🔢 Por favor, ingresa la cantidad de notas que deseas registrar: "))
         if cantidad > 0:
-            print("")
+            print("\n✔️ ¡Cantidad de notas aceptada!")
             break
         else:
-            print("la cantidad debe ser un numero mayor que 0. Intente nuevamente.")
+            print("\n⚠️ La cantidad debe ser un número mayor que 0. Intenta nuevamente.")
     except ValueError:
-        print("por favor, ingresa un dato valido.")
+        print("\n⚠️ Por favor, ingresa un dato válido.")
 
 # Ingreso de las calificaciones
-for i in range(1, cantidad+1):
+print("\n📝 Ingreso de calificaciones entre 0 y 100 ")
+for i in range(1, cantidad + 1):
     while True:
         try:
-            calificion = float(
-                input(f"Por favor, ingresa tu calificacion #{i} en el rango de 0 a 100: "))
+            calificion = float(input(f"  Ingrese tu calificación #{i}: "))
             if 0 <= calificion <= 100:
                 lista_De_Calificacion.append(calificion)
                 break
             else:
-                print(
-                    "la cantidad debe ser un numero entre el rango de 0 a 100. Intente nuevamente.")
+                print("\n⚠️ La calificación debe estar entre 0 y 100. Intenta nuevamente.")
         except ValueError:
-            print("por favor, ingresa un dato valido.")
-            
-            
+            print("\n⚠️ Por favor, ingresa un dato válido.")
+
 # Calcular el promedio de las calificaciones
 for i in lista_De_Calificacion:
     suma += i
 
-promedio = suma/len(lista_De_Calificacion)
-print(f"Tu promedio es {promedio:.2f}")
+promedio = suma / len(lista_De_Calificacion)
+
+# Presentación del promedio con un estilo más claro
+print(f"\n📊 Tu promedio es: {promedio:.2f}")
 
 # Evaluar si aprobaste o reprobaste
 if promedio >= aprobado:
-    print(f"Felicitaciones has aprobado con un promedio de {promedio:.2f}")
+    print(f"\n🎉 ¡Felicitaciones! Has aprobado con un promedio de {promedio:.2f}.")
 else:
-    print(f"Lo sentimos, has reprobrado con un promedio de {promedio:.2f}")
-
+    print(f"\n😔 Lo sentimos, has reprobado con un promedio de {promedio:.2f}.")
 
 # Contar las calificaciones mayores a la calificación específica
 while indice < len(lista_De_Calificacion):
-
     if lista_De_Calificacion[indice] > calificacion_Especifica:
         count += 1
     indice += 1
-print(
-    f"La cantidad de calificaciones que son mayores a {calificacion_Especifica} es {count}")
+
+print(f"\n📈 La cantidad de calificaciones mayores a {calificacion_Especifica} es: {count}.")
 
 # Contar cuántas veces aparece la calificación específica
 for i in lista_De_Calificacion:
     if calificacion_Especifica == i:
         contador += 1
         continue
-    if i < 60:
-        break
 
-print(f"La calificación {calificacion_Especifica} aparece {contador} {'veces' if contador > 1 else 'vez'}.")
+# Mostrar la cantidad de veces que aparece la calificación específica
+print(f"\n🔍 La calificación {calificacion_Especifica} aparece {contador} {'veces' if contador > 1 else 'vez'}.")
 
 
             
