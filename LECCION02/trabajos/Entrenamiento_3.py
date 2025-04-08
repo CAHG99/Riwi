@@ -73,3 +73,4 @@ inventario.append(producto)
 
 # Mostrar inventario
 print("Inventario actual:", inventario)
+

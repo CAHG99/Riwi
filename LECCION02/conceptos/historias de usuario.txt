@@ -1,0 +1,28 @@
+
+
+
+Problema: Calculadora de Presupuesto Mensual Personal 
+
+ 
+epica: Como persona que quiere organizar mejor su dinero
+quiero una herramienta sensilla que me permita calcular mis ingresos, 
+gastos y saldo mensual
+
+feat:
+
+costo total de las comisiones   
+H: como usuario quiero saber el valor total de las comisiones para poder analizar y gestionar mis finanzas
+
+costo total del prestamo (mensua): 
+h: como usuario quiero conocer el valor total a pagar por mes para planificar mis pagos de manera eficiente
+
+plazo del pago                     
+h: como usuario quiero saber el plazo para poder planificar mis pagos mensuales y gestionar mejor mis finanzas.
+
+prestamo sostenible por el usuario  
+h: como usuario quiero saber si mi prestamo es sostenible para asegurarme de que las cuotas mensuales sean adecuadas a mi capacidad de pago 
+
+Seleccionar tipos de prestamos
+h: como usuario quiero seleccionar entre diferentes tipos de prestamos para elegir uno adecuado que se adapte a mi presupuesto
+
+         
