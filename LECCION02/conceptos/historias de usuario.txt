@@ -25,4 +25,5 @@ h: como usuario quiero saber si mi prestamo es sostenible para asegurarme de que
 Seleccionar tipos de prestamos
 h: como usuario quiero seleccionar entre diferentes tipos de prestamos para elegir uno adecuado que se adapte a mi presupuesto
 
+#comentario
          
