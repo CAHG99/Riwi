@@ -57,3 +57,15 @@ elif n % 2 == 0:
     print(f"el numero {n} no es primo ") 
 else:
     print(f" El numero {n}  es primo")
+
+
+
+palabra = "celular"
+Vocales = ["a", "e" , "i" , "o" ,"u"]
+contador = 0
+
+for i in palabra:
+    if i in list(Vocales):    
+        contador += 1
+        
+print(contador) 

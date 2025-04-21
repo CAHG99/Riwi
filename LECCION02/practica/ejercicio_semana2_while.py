@@ -31,7 +31,6 @@ else:
 #5. Menú interactivo: Crea un menú con while que permita al usuario elegir entre opciones (por ejemplo, "1. Saludar", "2. Despedirse", "3. Salir") y solo termine cuando elija la opción de salir.
 # Menú interactivo
 while True:
-    # Mostrar el menú
     print("""  Elige entre estas opciones:
  
     1. Saludar
@@ -42,7 +41,6 @@ while True:
     # Solicitar al usuario que elija una opción
     opciones = input("Elige entre estas opciones (1/2/3): ")
     
-    # Acción según la opción elegida
     if opciones == "1":
         print("¡Hola! ¿Cómo estás?")
     elif opciones == "2":
@@ -69,7 +67,7 @@ while True:
     intento_usuario = int(input("Adivina el número entre 1 y 100: "))
     intentos += 1  # Contar los intentos
 
-    # Comprobar si el número ingresado es correcto
+
     if intento_usuario < numero_secreto:
         print("El número secreto es mayor. Intenta de nuevo.")
     elif intento_usuario > numero_secreto:
@@ -142,5 +140,7 @@ while True:
         # Si el usuario no ingresa un número válido
         print("Eso no es un número válido. Intenta de nuevo.")
     
+ 
+ 
     
     
