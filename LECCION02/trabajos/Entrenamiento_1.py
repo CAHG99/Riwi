@@ -14,10 +14,11 @@ while True:  # se inicia un bucle que se repetira hasta que se ingrese un numero
         if cantidad <= 0:
             print("la cantidad debe ser un numero mayor que 0. Intente nuevamente.")
         else:
-            break  # Si el valor ingresado no es valido, se sale del bucle
+            break
+
     except ValueError:  # si el valor ingresado no es valido, da error
         print("ingresa un numero valido.")
-
+        
 while True:
     try:
         precio = float(input("Ingresa el precio unitario: "))
@@ -27,10 +28,10 @@ while True:
             break
     except ValueError:
         print("ingresa un numero valido.")
-
+        
 while True:
     try:
-        descuento = int(
+        descuento = float(
             input("Ingresa el porcentaje de descuento que se aplicará: "))
         if descuento < 0 or descuento > 100:
             print("El descuento debe estar entre 0 y 100.")
