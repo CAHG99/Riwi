@@ -1,7 +1,7 @@
-#\'
-#\"
-#\\
-#\n
+# \'
+# \"
+# \\
+# \n
 
 curso = "ultimate \npython\""
 print(curso)
