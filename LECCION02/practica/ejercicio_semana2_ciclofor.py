@@ -91,3 +91,56 @@ for i in range (1,intmax+1):
             print("contraseña incorrecta") 
         else: 
             print("contraseña incorrecta")  
+
+
+#suma condicional de numeros
+suma=0
+for i in range(1, 101):
+    if i % 3 != 0 and i % 2 != 0:
+        suma += i   
+          
+print(suma)
+        
+        
+#Reemplazar vocales por un simbolo en una palabra 
+palabra = input("Escribe una palabra: ")
+lista = ["a","e","i","o","u"]
+nuevaPalabra = ""
+
+for i in palabra:
+    if i.lower() in lista:
+        nuevaPalabra += "*"
+    else:
+        nuevaPalabra += i
+        
+print(f"la palabra contiene la letra {nuevaPalabra}")
+        
+
+
+#Buscar el caracter mas frecuente en una cadena sin usar collections
+letra = input("Escribe una letra: ")
+contador = {}
+
+for i in letra:
+    if i in contador:
+        contador[i] += 1
+        print(contador)
+    else:
+        contador[i] = 1
+
+letra_max = ""
+max_repeticiones = 0
+
+for i in contador:
+    if contador[i] > max_repeticiones:
+        letra_max = i
+        max_repeticiones = contador[i]
+
+if letra_max:
+    print(f"La letra que más se repite es '{letra_max}' con {max_repeticiones} repeticiones.")
+else:
+    print("No se ingresaron letras.")
+
+
+
+ #Generar una lista de los primeros n numeros primos
