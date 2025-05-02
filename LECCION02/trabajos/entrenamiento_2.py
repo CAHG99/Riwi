@@ -2,80 +2,69 @@ import os
 os.system("clear")
 
 # Variables de control
-lista_De_Calificacion = []
-calificion = 0
-aprobado = 60
-suma = 0
-indice = 0
-count = 0
-contador = 0
+quialificationList = []
+qualification = 0
+approved = 60
+addition = 0
+index = 0
+count1 = 0
+count2 = 0
 
-# Bucle para validar la calificación específica
-while True:
-    try:
-        calificacion_Especifica = float(input("\n📚 Por favor, ingresa una nota específica para comparar: "))
-        if calificacion_Especifica >= 0:
-            print("\n✔️ ¡Nota válida ingresada!")
-            break
-        else:
-            print("\n⚠️ Por favor, ingresa un número válido. Intenta nuevamente.")
-    except ValueError:
-        print("\n⚠️ Por favor, ingresa un dato válido.")
 
-# Bucle para ingresar la cantidad de notas
-while True:
-    try:
-        cantidad = int(input("\n🔢 Por favor, ingresa la cantidad de notas que deseas registrar: "))
-        if cantidad > 0:
-            print("\n✔️ ¡Cantidad de notas aceptada!")
-            break
-        else:
-            print("\n⚠️ La cantidad debe ser un número mayor que 0. Intenta nuevamente.")
-    except ValueError:
-        print("\n⚠️ Por favor, ingresa un dato válido.")
-
-# Ingreso de las calificaciones
-print("\n📝 Ingreso de calificaciones entre 0 y 100 ")
-for i in range(1, cantidad + 1):
+# Función de validación
+def validation ( menssage, type = float, condition = lambda x: x > 0, bug = "El valor no es válido"):
     while True:
         try:
-            calificion = float(input(f"  Ingrese tu calificación #{i}: "))
-            if 0 <= calificion <= 100:
-                lista_De_Calificacion.append(calificion)
-                break
+            value = type(input(menssage))
+            if condition(value):
+                return value
             else:
-                print("\n⚠️ La calificación debe estar entre 0 y 100. Intenta nuevamente.")
+                print(bug)
         except ValueError:
-            print("\n⚠️ Por favor, ingresa un dato válido.")
+            print("Ingresa un número válido.")
+
+
+#Función para ingresary validar calificaciones
+def pqualification ( amount,list):
+    for i in range(1, amount + 1):
+        note = validation(f"  Ingrese la calificación #{i}: ", float, lambda x:0 <= x <= 100, "\n⚠️ La calificación debe estar entre 0 y 100. Intenta nuevamente.")
+        list.append(note)
+
+                     
+specificRating = validation("Por favor, ingresa una nota específica para comparar : ", type = float, condition = lambda x: x > 0, bug = "\n📚 Por favor, ingresa un número válido.")
+amount = validation("Por favor, ingresa la cantidad de notas que deseas registrar : ", type = int, condition = lambda x: x > 0, bug = "\n⚠️ La cantidad debe ser un número mayor que 0. Intenta nuevamente.")
+pqualification(amount ,quialificationList)
+print("Calificaciones ingresadas:", quialificationList)
+
 
 # Calcular el promedio de las calificaciones
-for i in lista_De_Calificacion:
-    suma += i
+for i in quialificationList:
+    addition += i
 
-promedio = suma / len(lista_De_Calificacion)
+average = addition / len(quialificationList)
 
 # Presentación del promedio con un estilo más claro
-print(f"\n📊 Tu promedio es: {promedio:.2f}")
+print(f"\n📊 Tu promedio es: {average:.2f}")
 
 # Evaluar si aprobaste o reprobaste
-if promedio >= aprobado:
-    print(f"\n🎉 ¡Felicitaciones! Has aprobado con un promedio de {promedio:.2f}.")
+if average >= approved:
+    print(f"\n🎉 ¡Felicitaciones! Has aprovado con un promedio de {average:.2f}.")
 else:
-    print(f"\n😔 Lo sentimos, has reprobado con un promedio de {promedio:.2f}.")
+    print(f"\n😔 Lo sentimos, has reprobado con un promedio de {average:.2f}.")
 
 # Contar las calificaciones mayores a la calificación específica
-while indice < len(lista_De_Calificacion):
-    if lista_De_Calificacion[indice] > calificacion_Especifica:
-        count += 1
-    indice += 1
+while index < len(quialificationList):
+    if quialificationList[index] > specificRating:
+        count1 += 1
+    index += 1
 
-print(f"\n📈 La cantidad de calificaciones mayores a {calificacion_Especifica} es: {count}.")
+print(f"\n📈 La cantidad de calificaciones mayores a {specificRating} es: {count1}.")
 
 # Contar cuántas veces aparece la calificación específica
-for i in lista_De_Calificacion:
-    if calificacion_Especifica == i:
-        contador += 1
+for i in quialificationList:
+    if specificRating == i:
+        count2 += 1
         continue
 
 # Mostrar la cantidad de veces que aparece la calificación específica
-print(f"\n🔍 La calificación {calificacion_Especifica} aparece {contador} {'veces' if contador > 1 else 'vez'}.")
+print(f"\n🔍 La calificación {specificRating} aparece {count2} {'veces' if count2 > 1 else 'vez'}.")
