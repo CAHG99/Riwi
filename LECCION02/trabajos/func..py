@@ -9,3 +9,5 @@ def validation ( menssage, type = float, condition = lambda x: x > 0, bug = "El 
         except ValueError:
             print("Ingresa un número válido.")
  
+ 
+ 

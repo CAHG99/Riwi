@@ -12,7 +12,7 @@ count2 = 0
 
 
 # Función de validación
-def validation ( menssage, type = float, condition = lambda x: x > 0, bug = "El valor no es válido"):
+def validation(menssage, type=float, condition=lambda x: x > 0, bug="El valor no es válido"):
     while True:
         try:
             value = type(input(menssage))
@@ -24,23 +24,38 @@ def validation ( menssage, type = float, condition = lambda x: x > 0, bug = "El 
             print("Ingresa un número válido.")
 
 
-#Función para ingresary validar calificaciones
-def pqualification ( amount,list):
+# Función para ingresar y validar calificaciones
+def pqualification(amount, list):
     for i in range(1, amount + 1):
-        note = validation(f"  Ingrese la calificación #{i}: ", float, lambda x:0 <= x <= 100, "\n⚠️ La calificación debe estar entre 0 y 100. Intenta nuevamente.")
+        note = validation(f"  Ingrese la calificación #{i}: ", float, lambda x: 0 <= x <=
+                          100, "\n⚠️ La calificación debe estar entre 0 y 100. Intenta nuevamente.")
         list.append(note)
 
-                     
-specificRating = validation("Por favor, ingresa una nota específica para comparar : ", type = float, condition = lambda x: x > 0, bug = "\n📚 Por favor, ingresa un número válido.")
-amount = validation("Por favor, ingresa la cantidad de notas que deseas registrar : ", type = int, condition = lambda x: x > 0, bug = "\n⚠️ La cantidad debe ser un número mayor que 0. Intenta nuevamente.")
-pqualification(amount ,quialificationList)
-print("Calificaciones ingresadas:", quialificationList)
+
+specificRating = validation(
+    "Por favor, ingresa una nota específica para comparar : ",
+    float,
+    lambda x: x > 0,
+    "\n📚 Por favor, ingresa un número válido.")
+
+amount = validation(
+    "Por favor, ingresa la cantidad de notas que deseas registrar : ",
+    int,
+    lambda x: x > 0,
+    "\n⚠️ La cantidad debe ser un número mayor que 0. Intenta nuevamente.")
+
+pqualification(amount, quialificationList)
 
 
-# Calcular el promedio de las calificaciones
+# Calcular el promedio de las calificaciones # Contar cuántas veces aparece la calificación específica
 for i in quialificationList:
     addition += i
-
+    print(addition)
+    if specificRating == i:
+        count2 += 1
+        continue
+    
+     
 average = addition / len(quialificationList)
 
 # Presentación del promedio con un estilo más claro
@@ -48,9 +63,11 @@ print(f"\n📊 Tu promedio es: {average:.2f}")
 
 # Evaluar si aprobaste o reprobaste
 if average >= approved:
-    print(f"\n🎉 ¡Felicitaciones! Has aprovado con un promedio de {average:.2f}.")
+    print(
+        f"\n🎉 ¡Felicitaciones! Has aprovado con un promedio de {average:.2f}.")
 else:
     print(f"\n😔 Lo sentimos, has reprobado con un promedio de {average:.2f}.")
+    
 
 # Contar las calificaciones mayores a la calificación específica
 while index < len(quialificationList):
@@ -58,13 +75,9 @@ while index < len(quialificationList):
         count1 += 1
     index += 1
 
-print(f"\n📈 La cantidad de calificaciones mayores a {specificRating} es: {count1}.")
-
-# Contar cuántas veces aparece la calificación específica
-for i in quialificationList:
-    if specificRating == i:
-        count2 += 1
-        continue
+print(
+    f"\n📈 La cantidad de calificaciones mayores a {specificRating} es: {count1}.")
 
 # Mostrar la cantidad de veces que aparece la calificación específica
-print(f"\n🔍 La calificación {specificRating} aparece {count2} {'veces' if count2 > 1 else 'vez'}.")
+print(
+    f"\n🔍 La calificación {specificRating} aparece {count2} {'veces' if count2 > 1 else 'vez'}.")
