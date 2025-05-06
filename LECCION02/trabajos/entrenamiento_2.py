@@ -50,16 +50,15 @@ pqualification(amount, quialificationList)
 # Calcular el promedio de las calificaciones # Contar cuántas veces aparece la calificación específica
 for i in quialificationList:
     addition += i
-    print(addition)
     if specificRating == i:
         count2 += 1
         continue
-    
-     
-average = addition / len(quialificationList)
 
-# Presentación del promedio con un estilo más claro
+
+# Calcular el promedio
+average = addition / len(quialificationList)
 print(f"\n📊 Tu promedio es: {average:.2f}")
+
 
 # Evaluar si aprobaste o reprobaste
 if average >= approved:
@@ -67,7 +66,7 @@ if average >= approved:
         f"\n🎉 ¡Felicitaciones! Has aprovado con un promedio de {average:.2f}.")
 else:
     print(f"\n😔 Lo sentimos, has reprobado con un promedio de {average:.2f}.")
-    
+
 
 # Contar las calificaciones mayores a la calificación específica
 while index < len(quialificationList):
@@ -77,7 +76,5 @@ while index < len(quialificationList):
 
 print(
     f"\n📈 La cantidad de calificaciones mayores a {specificRating} es: {count1}.")
-
-# Mostrar la cantidad de veces que aparece la calificación específica
 print(
     f"\n🔍 La calificación {specificRating} aparece {count2} {'veces' if count2 > 1 else 'vez'}.")

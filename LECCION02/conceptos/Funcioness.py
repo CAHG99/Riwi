@@ -10,8 +10,6 @@ def reverse (texto):
     for i in texto:
         texto_al_reves = i + texto_al_reves
     return texto_al_reves
-    
-    
      
 
 def es_palindromo(texto):
