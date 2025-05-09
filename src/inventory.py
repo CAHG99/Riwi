@@ -1,4 +1,17 @@
-from main import stock, name
+stock = [
+    {"detergente": (10000, 40)},
+    {"esponja": (5000, 25)},
+    {"olla": (80000, 20)},
+    {"papel": (20000, 22)},
+    {"shampoo": (18000, 12)},
+    {"aspiradora": (350000, 3)},
+    {"refrigerador": (1200000, 2)},
+    {"sarten": (40000, 8)},
+    {"tostadora": (45000, 4)},
+    {"microonda": (250000, 2)},
+    {"sofa": (800000, 3)},
+    {"ventilador": (120000, 6)},
+]
 
 def addProduct(name, price, amount):
     for product in stock:
@@ -14,7 +27,7 @@ def addProduct(name, price, amount):
         return
 
 
-def searchProduct(list_products):
+def searchProduct(name, list_products):
     for product in list_products:
         nameReal = next(iter(product))
         if nameReal.lower() == name:

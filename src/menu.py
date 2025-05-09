@@ -1,7 +1,3 @@
-import os
-os.system("clear")
-
-
 def menu():
     print("""
 1.Anadir productos
