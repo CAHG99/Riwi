@@ -1,0 +1,52 @@
+@media (max-width: 768px) {
+    .box-main{
+        background-color: blue;
+    }
+
+    .menu-mobile{
+        display: block !important;
+    }
+    
+    .box{
+        background-image: url(/HTML/entrenamiento/img/2-original.png);
+        background-size: cover;
+        color: white;
+    }
+}
+
+@media (min-width:469px) and (max-width: 768px){
+    .tablet{
+        display: block !important;
+    }
+}
+
+@media (max-width:468px) {
+    .mobile{
+        display: block !important;
+    }
+}
+
+@media (min-width:769px) {
+    .desktop{
+        display: block !important;
+    }
+}
+
+.menu-mobile{
+    display: none;
+}
+
+.mobile{
+    display: none;
+    width: 465px;
+}
+
+.tablet{
+    display: none;
+    width: 768px;
+}
+
+.desktop{
+    display: none;
+    width: 1020px;
+}
