@@ -1,0 +1,132 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(59, 56, 56);
+    height: 120px;
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+header h1 {
+    margin-right: 20px 0px;
+    border-bottom: 4px solid;
+    padding-right: 200px;
+    align-content: center;
+}
+
+p {
+    display: flex;
+
+}
+
+main {
+    background-color: rgb(32, 56, 100);
+    height: 500px;
+}
+
+#profile {
+    display: flex;
+}
+
+#profile div.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#profile .left .box-item {
+    width: 267px;
+    border: 2px solid;
+    color: #fff;
+    margin-top: -100px;
+}
+
+#profile div.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+    color: #fff;
+}
+
+#profile div.right .box-item {
+    width: 95%;
+}
+
+#profile div.right div#firts-text {
+    margin-bottom: 10px;
+}
+
+#profile div.right div.description-text {
+    border: 2px solid;
+    padding: 10px;
+}
+
+#profile #picture {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+
+#profile figure {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(47, 85, 150);
+    border-radius: 300px;
+    border: 2px solid #ffff;
+}
+
+#profile figure img {
+    background-color: #ffff;
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    margin-top: 17px;
+    border: 6px solid rgb(146, 171, 219);
+}
+
+.profile-description {
+    margin-top: 1em;
+}
+
+.profile-description input {
+    margin-bottom: 1em;
+    background: none;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: repeating-linear-gradient(to right, black 0px, black 2px, white 2px, white 4px);
+    margin: 9px;
+}
+
+footer .barcode marque#cody-footer {
+    background-color: blue;
+}
+
+.total-width-porfolio {
+    width: 100%;
+}
+
+.box-item {
+    box-sizing: border-box;
+}
